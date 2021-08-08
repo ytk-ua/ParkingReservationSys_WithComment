@@ -1,0 +1,411 @@
+@charset "UTF-8";
+
+/*見出し・本文の編集*/
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0 ;
+}
+p {
+    margin-top: 0 ;
+    line-height: 1.6;
+}
+body {
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+}
+h2 {
+    border-left: solid 3px #C09933;
+    padding: 4px 9px 4px 14px;
+}
+.error{
+    color: #AA0000;
+    font-style: italic;
+    font-weight:  bolder;
+}
+.flash{
+    color: #C09933;
+    font-style: italic;
+    font-weight:  bolder;
+}
+.session{
+    color: #6f3f1e;
+    font-style: italic;
+    font-weight:  bolder;
+}
+/**/
+
+/*リンクの挙動*/
+a { 
+    color: #6f3f1e;
+    font-weight:bold;
+    text-decoration: none;
+    text-decoration: underline; 
+    }
+/*a:visited { color: #a8a8a8; }*/
+a:hover {
+    color: #6f3f1e;
+    font-weight:bolder;
+    font-weight:lighter;
+    /*text-decoration: underline; */
+    opacity: 0.7;
+    transition: opacity 0.1s linear;
+}
+a:hover img {
+    opacity: 0.7;
+    transition: opacity 0.2s linear;
+}
+/**/
+
+/*画像*/
+img {
+    vertical-align: bottom;
+}
+/*#main_visual {*/
+/*    width: 980px;*/
+/*    height: 440px;*/
+/*    margin: 0 auto 48px;*/
+/*}*/
+/**/
+
+/*ヘッダー*/
+header {
+    width: 980px;
+    margin: 0 auto;
+}
+header #logo{
+	width: 100px;
+	height: auto;
+	float: left;
+	margin: 5px 0 10px;
+}
+header .login_user {
+    float: right;
+    margin: 35px 0 0;
+    text-decoration: none;
+    width:90px;
+    font-size:0.4em;
+    color: #f4f4f4;
+    text-align:center;
+    display:block;
+    background: #C09933;
+    /*background: linear-gradient(to bottom, #C09933 0%, #E6D8B3 100%);*/
+    border-radius: 5px;
+}
+header .login_admin {
+    float: right;
+    margin: 35px 0 0;
+    text-decoration: none;
+    width:90px;
+    font-size:0.4em;
+    color: #f4f4f4;
+    text-align:center;
+    display:block;
+    /*background: linear-gradient(to bottom, #915524 0%, #c39665 100%);*/
+    background: #915524;
+    border-radius: 5px;
+}
+header .user_edit {
+    float: right;
+    margin: 35px 0 0;
+    text-decoration: none;
+    width:90px;
+    font-size:0.8em;
+    color: #f4f4f4;
+    text-align:center;
+    display:block;
+    background: #C09933;
+    /*background: linear-gradient(to bottom, #C09933 0%, #E6D8B3 100%);*/
+    border-radius: 5px;
+}
+header .user_logout {
+    float: right;
+    margin: 35px 0 0;
+    text-decoration: none;
+    width:90px;
+    font-size:0.8em;
+    color: #f4f4f4;
+    text-align:center;
+    display:block;
+    /*background: linear-gradient(to bottom, #915524 0%, #c39665 100%);*/
+    background: #915524;
+    border-radius: 5px;
+}
+header .admin_list {
+    float: right;
+    margin: 35px 0 0;
+    text-decoration: none;
+    width:90px;
+    font-size:0.8em;
+    color: #f4f4f4;
+    text-align:center;
+    display:block;
+    background: #C09933;
+    /*background: linear-gradient(to bottom, #C09933 0%, #E6D8B3 100%);*/
+    border-radius: 5px;
+}
+header .admin_logout {
+    float: right;
+    margin: 35px 0 0;
+    text-decoration: none;
+    width:90px;
+    font-size:0.8em;
+    color: #f4f4f4;
+    text-align:center;
+    display:block;
+    /*background: linear-gradient(to bottom, #915524 0%, #c39665 100%);*/
+    background: #915524;
+    border-radius: 5px;
+}
+header #header_button ul {
+     list-style: none;
+     margin: 0;
+     padding: 0;
+}
+header #header_button ul li {
+    width: 90px;
+    float: right;
+    margin-right: 5px;
+    text-align: center;
+}
+/*header .login_user .login_admin:hover {*/
+/*    color: #f4f4f4;*/
+    /*font-weight:bold;*/
+    /*text-decoration: underline;*/
+    /*background:#c39665;*/
+/*}*/
+
+/*グローバルナビ*/
+header #global_navi {
+    width: 980px;
+    clear: both;
+    overflow: hidden;
+    margin: 16px auto;
+}
+header #global_navi ul {
+     list-style: none;
+     margin: 0;
+     padding: 0;
+}
+header #global_navi ul li {
+    width: 240px;
+    float: left;
+    margin-right: 5px;
+    text-align: center;
+}
+header #global_navi ul li a {
+    display: block;
+    padding: 16px;
+    background-color: #0e0e0e;
+    color: #f4f4f4;
+    text-decoration: none;
+    transition: background-color 0.2s linear;
+}
+header #global_navi ul li a:hover {
+    background-color:  #915524;
+    font-weight:bold;
+}
+header #global_navi ul li.current a {
+    background-color: #c39665;
+}
+/**/
+
+/*グローバルナビ（管理者ページ）*/
+header #global_navi_admin {
+    width: 980px;
+    clear: both;
+    overflow: hidden;
+    margin: 16px auto;
+}
+header #global_navi_admin ul {
+     list-style: none;
+     margin: 0;
+     padding: 0;
+}
+header #global_navi_admin ul li {
+    width: 135px;
+    float: left;
+    margin-right: 5px;
+    text-align: center;
+}
+header #global_navi_admin ul li a {
+    display: block;
+    padding: 16px;
+    background-color: #0e0e0e;
+    color: #f4f4f4;
+    text-decoration: none;
+    transition: background-color 0.2s linear;
+}
+header #global_navi_admin ul li a:hover {
+    background-color:  #915524;
+    font-weight:bold;
+}
+header #global_navi_admin ul li.current a {
+    background-color: #c39665;
+}
+/**/
+
+/*メイン*/
+#main {
+    width: 980px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+/**/
+
+/*フッター*/
+footer {
+    background-color: #d8ba9d;
+    text-align: center;
+}
+footer #footer_nav {
+    background-color: #c39665;
+    padding: 10px 0;
+}
+footer #footer_nav li {
+    display: inline;
+    border-left: solid 1px #915524;
+    margin-left: 8px;
+    padding-left: 8px;
+    font-size: smaller;
+}
+footer #footer_nav li:last-child {
+    border-right: solid 1px #915524;
+    padding: 0 8px;
+}
+footer small {
+    display: block;
+    padding: 8px 0;
+    color: #0e0e0e;
+}
+/**/
+
+/*お知らせ*/
+#notices dl {
+    overflow: hidden;
+    background-color: #fff;
+    border: 0px none;
+}
+#notices dt {
+    width: 9em;
+    float: left;
+    margin-bottom: 10px;
+    clear: both;
+    border: 0px none;
+}
+#notices dd {
+    margin-left: 9em;
+    margin-bottom: 10px;
+    border: 0px none;
+}
+/**/
+
+/*Table*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 16px;
+}
+th, td {
+    border: 1.5px solid #c7c7c7;
+    padding: 4px;
+    font-size: 0.8em;
+    text-align: center;
+}
+th {
+    background-color: #d8ba9d;
+}
+
+.total {
+    text-align: right;
+    color: purple;
+    font-weight: bold;
+    width: 100%;
+}
+/*table, tr, th, td {*/
+/*    border: solid 2px;*/
+/*} */
+/**/
+
+/*登録情報入力画面*/
+dl {
+    width: 60%;
+    background-color: #d8ba9d;
+    border: 1px solid #ddd;
+    border-top: 0;
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+}
+dl dt, dl dd {
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+dl dt {
+    width: 13em;
+    float: left;
+    clear: both;
+    font-weight: bold;
+}
+dl dd {
+    background-color: #fff;
+    border-left: 1px solid #ddd;
+    margin-left: 13em;
+}
+/*#notices dl{*/
+/*    background-color: #fff;*/
+/*}*/
+.must {
+    color: #f00;
+    font-size:0.7em;
+}
+#name, #room_no, #account, #password, #email, #tel {
+    width: 80%;
+}
+#body {
+    height: 10em;
+}
+#title, #link_url, #overview {
+    width: 80%;
+}
+#parking_name, #price, #size, #address, #remarks {
+    width: 80%;
+}
+/*#submit_button, #reset_button {*/
+    /*margin-left: 16em;*/
+    /*text-align: center;*/
+/*}*/
+/**/
+
+/*レスポンシブ対応*/
+@media screen and (max-width : 767px){
+    img{
+        max-width: 100%;
+    }
+    header,
+    #main,
+    footer,
+    header #global_navi{
+        width: 100%;
+    }
+    header h1{
+        float: none;
+        text-align: center;
+    }
+    header h1{
+        float: none;
+        text-align: center;
+    }
+    header img{
+        width: 50%;
+    }
+    header #global_navi ul li{
+        width: 50%;
+        padding: 0.5px;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    header #global_navi ul li a{
+        margin: 0;
+    }
+    
+}
